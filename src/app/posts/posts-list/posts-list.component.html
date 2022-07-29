@@ -1,0 +1,36 @@
+
+<div class="container">
+<div class="row">
+  <div class="col-md-12" style="margin-top: 50px">
+
+  
+
+    <table class="table table-striped border" *ngIf="posts | async as postsData">
+      <thead>
+        <tr>
+         <th>Name</th>
+          <th>Origin</th>
+          <th>Notes</th>
+          <th>Intensifier</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of postsData">
+          <td style="word-break: break-all">{{ post.blend_name }}</td>
+          <td style="word-break: break-all">{{ post.origin }}</td>
+          <td style="word-break: break-all">{{ post.notes }}</td>
+          <td style="word-break: break-all">{{ post.intensifier }}</td>
+         
+          <!--
+            <a href="" class="btn btn-info" [routerLink]="['details', post.id]"
+              >Details
+            </a>-->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+</div>
+
+</div>
